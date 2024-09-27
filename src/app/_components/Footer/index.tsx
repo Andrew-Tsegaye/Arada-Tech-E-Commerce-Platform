@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 
 import { Footer } from '../../../payload/payload-types'
 import { fetchFooter, fetchGlobals } from '../../_api/fetchGlobals'
@@ -13,8 +12,6 @@ export async function FooterSection() {
   } catch (error) {
     console.log(error)
   }
-
-  const navItems = footer?.navItems || []
 
   return (
     <>
