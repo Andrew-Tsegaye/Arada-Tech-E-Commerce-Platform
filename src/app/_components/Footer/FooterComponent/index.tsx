@@ -47,7 +47,6 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
             <div className={classes.socialLinks}>
               {navItems.map(item => {
                 const icon = item?.link?.icon as Media
-                console.log(icon)
 
                 return (
                   <Button
