@@ -14,7 +14,6 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
   const pathname = usePathname()
 
   const navItems = footer?.navItems || []
-  console.log(navItems)
 
   return (
     <footer className={noHeaderFooterUrls.includes(pathname) ? classes.hide : ''}>
