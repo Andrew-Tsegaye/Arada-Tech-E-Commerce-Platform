@@ -6,6 +6,8 @@ import Link from 'next/link'
 import { Settings } from '../../../../payload/payload-types'
 import { useAuth } from '../../../_providers/Auth'
 
+import classes from './index.module.scss'
+
 export const LogoutPage: React.FC<{
   settings: Settings
 }> = props => {
@@ -31,7 +33,7 @@ export const LogoutPage: React.FC<{
   return (
     <Fragment>
       {(error || success) && (
-        <div>
+        <div className={classes.actions}>
           <h1>{error || success}</h1>
           <p>
             {'What would you like to do next?'}
@@ -43,7 +45,9 @@ export const LogoutPage: React.FC<{
               </Fragment>
             )}
             {` To log back in, `}
-            <Link href="/login">click here</Link>
+            <Link className={classes.click} href="/login">
+              click here
+            </Link>
             {'.'}
           </p>
         </div>
